@@ -1,14 +1,16 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int main(void) {
-    printf("Size of char: %zu byte(s)\n", sizeof(char));
-    printf("Size of short: %zu byte(s)\n", sizeof(short));
-    printf("Size of int: %zu byte(s)\n", sizeof(int));
-    printf("Size of long: %zu byte(s)\n", sizeof(long));
-    printf("Size of long long: %zu byte(s)\n", sizeof(long long));
-    printf("Size of float: %zu byte(s)\n", sizeof(float));
-    printf("Size of double: %zu byte(s)\n", sizeof(double));
-    printf("Size of long double: %zu byte(s)\n", sizeof(long double));
+/**
+ * main - Entry point
+ *
+ * Description: Prints a quote using the write function
+ *
+ * Return: 1 (error)
+ */
+int main(void)
+{
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-    return 0;
+	write(1, quo, 59);
+	return (1);
 }
